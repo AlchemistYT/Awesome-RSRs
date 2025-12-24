@@ -21,13 +21,13 @@ This survey provides the first systematic review of advances in RSR research. We
 
 
 # Background and Fundamentals
-![Compared Image](instance.png)
+![Compared Image](figures/instance.png)
 
 An example showing how an interaction sequence is split into data instances by a sliding window.
 In each step of sliding, the last item in the sliding window is treated as the target of an instance, while the
 preceding items in the window serve as the input.
 
-![Compared Image](robustness.png)
+![Compared Image](figures/robustness.png)
 
 - **Training-phase Robustness**: During training, the RSR must precisely identify items within
 the input sequence that are genuinely relevant to the target (i.e., driven by the same intrinsic
@@ -39,11 +39,11 @@ complete coverage for these motivations, without being skewed by perturbations [
 
 
 # Unreliable Instances in Sequential Recommendation
-![Compared Image](causes.png)
+![Compared Image](figures/causes.png)
 
 # Taxonomy of RSRs
 
-![Compared Image](taxonomy.png)
+![Compared Image](figures/rsr-taxonomy.png)
 
 - **Architecture-centric RSRs** embed robustness directly into the model architecture through perturbation-resistant designs (e.g., gating mechanisms or diffusion models), ensuring stable internal representations despite perturbed sequences.
 - **Data-centric RSRs** operate at the Instance Construction stage, focusing on cleansing training data before or during model training. They proactively identify and rectify mismatched input-target pairs (via selection, reweighting, or correction), thereby eliminating erroneous sequential patterns from the training process.
@@ -63,7 +63,7 @@ complete coverage for these motivations, without being skewed by perturbations [
 
 ## Architecture-centric RSRs
 
-![Compared Image](Architecture-centric-RSRs.png)
+![Compared Image](figures/Architecture-centric-RSRs.png)
 
 | Category | Subcategory | Method | Venue-Year | P1: Multi-cause Robustness | P2: Dual-manifestation Robustness | P3: Dual-phase Robustness | P4: Motivation Transformation Awareness | P5: Generality | P6: Data Accessibility | P7: Scalability | P8: Theoretical Grounding |
 |----------|-------------|--------------------------------------------------------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
@@ -140,7 +140,7 @@ complete coverage for these motivations, without being skewed by perturbations [
 
 ## Data-centric RSRs
 
-![Compared Image](Data-Centric-RSRs.png)
+![Compared Image](figures/Data-Centric-RSRs.png)
 
 | Category | Subcategory | Method | Venue-Year | Multi-cause Robustness | Dual-manifestation Robustness | Dual-phase Robustness | Motivation Transformation Awareness | Generality | Data Accessibility | Scalability | Theoretical Grounding |
 |----------|-------------|--------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
@@ -166,7 +166,7 @@ complete coverage for these motivations, without being skewed by perturbations [
 
 # Learning-centric RSRs
 
-![Compared Image](Learning-Centric-RSRs.png)
+![Compared Image](figures/Learning-Centric-RSRs.png)
 
 | Category | Subcategory | Method | Venue-Year | Multi-cause Robustness | Dual-manifestation Robustness | Dual-phase Robustness | Motivation Transformation Awareness | Generality | Data Accessibility | Scalability | Theoretical Grounding |
 |----------|-------------|--------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
@@ -226,7 +226,7 @@ complete coverage for these motivations, without being skewed by perturbations [
 
 # Inference-centric RSRs
 
-![Compared Image](Inference-Centric-RSRs.png)
+![Compared Image](figures/Inference-Centric-RSRs.png)
 
 | Category | Subcategory | Method | Venue-Year | Multi-cause Robustness | Dual-manifestation Robustness | Dual-phase Robustness | Motivation Transformation Awareness | Generality | Data Accessibility | Scalability | Theoretical Grounding |
 |----------|-------------|--------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
