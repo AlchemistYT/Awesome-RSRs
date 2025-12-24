@@ -6,14 +6,62 @@ In the era of information overload, sequential recommender systems (SRSs) have b
 Conventional SRSs operate on a critical assumption that every input interaction sequence is reliably matched with the target subsequent interaction. However, this assumption is frequently violated in practice: real-world user behaviors are often driven by extrinsic motivations—such as behavioral randomness, contextual influences, and malicious attacks—which introduce perturbations into interaction sequences. These perturbations result in mismatched input-target pairs, termed as \textit{unreliable instances}, which corrupt sequential patterns, mislead model training and inference, and ultimately degrade recommendation accuracy. To mitigate these issues, the study of Robust Sequential Recommenders (RSRs) has thus emerged as a focal point.
 This survey provides the first systematic review of advances in RSR research. We begin with a thorough analysis of unreliable instances, detailing their causes, manifestations, and adverse impacts. We then delineate the unique challenges of RSRs, which are absent in non-sequential settings and general denoising tasks. Subsequently, we present a holistic taxonomy of RSR methodologies and a systematic comparative analysis based on eight key properties, critically evaluating the strengths and limitations of existing approaches. We also summarize standard evaluation metrics and benchmarks. Finally, we identify open issues and discuss promising future research directions.
 
-## Categories Index
+# Table of Contents
+- [Background and Fundamentals](#Background-and-Fundamentals)
+- [Unreliable Instances in Sequential Recommendation](#Unreliable-Instances-in-Sequential-Recommendation)
+- [Taxonomy of RSRs](#Taxonomy-of-RSRs)
+- [Evaluation Framework of RSRs](#Evaluation-Framework-of-RSRs)
+  - [Architecture-centric RSRs](#Architecture-centric-RSRs)
+  - [Data-centric RSRs](#Data-centric-RSRs)
+  - [Learning-centric RSRs](#Learning-centric-RSRs)
+  - [Inference-centric RSRs](#Inference-centric-RSRs )
 
-- [Architecture-centric RSRs](#Architecture-centric-RSRs)
-- [Data-centric RSRs](#Data-centric-RSRs)
-- [Learning-centric RSRs](#Learning-centric-RSRs)
-- [Inference-centric RSRs](#Inference-centric-RSRs )
 
-# Architecture-centric RSRs
+
+
+
+# Background and Fundamentals
+![Compared Image](instance.png)
+
+An example showing how an interaction sequence is split into data instances by a sliding window.
+In each step of sliding, the last item in the sliding window is treated as the target of an instance, while the
+preceding items in the window serve as the input.
+
+![Compared Image](robustness.png)
+
+- **Training-phase Robustness**: During training, the RSR must precisely identify items within
+the input sequence that are genuinely relevant to the target (i.e., driven by the same intrinsic
+motivations). By focusing on these items, the model avoids learning erroneous patterns from
+perturbations.
+- **Inference-phase Robustness**: During inference, the target is unobservable. The RSR must
+infer the underlying motivations from the input and ensure the recommendation list provides
+complete coverage for these motivations, without being skewed by perturbations [26, 27].
+
+
+# Unreliable Instances in Sequential Recommendation
+![Compared Image](causes.png)
+
+# Taxonomy of RSRs
+
+![Compared Image](taxonomy.png)
+
+- **Architecture-centric RSRs** embed robustness directly into the model architecture through perturbation-resistant designs (e.g., gating mechanisms or diffusion models), ensuring stable internal representations despite perturbed sequences.
+- **Data-centric RSRs** operate at the Instance Construction stage, focusing on cleansing training data before or during model training. They proactively identify and rectify mismatched input-target pairs (via selection, reweighting, or correction), thereby eliminating erroneous sequential patterns from the training process.
+- **Learning-centric RSRs** introduce robustness during model training. Rather than modifying the data or core architecture, they leverage specialized training strategies (e.g., adversarial training, robust loss functions) to guide the model to learn genuine user preferences while diminishing the influence of unreliable instances.
+- **Inference-centric RSRs** address robustness at the final model inference stage. Acknowledging that real-time input sequences may contain perturbations, these methods generate comprehensive and balanced recommendation lists that fully capture users’ underlying motivations and avoid being skewed by perturbations.
+
+# Evaluation Framework of RSRs
+
+- **Multi-cause Robustness**: Ability to address diverse extrinsic motivations (behavioral randomness, contextual influences, malicious manipulations) that induce unreliable instances.
+- **Dual-manifestation Robustness**: Capacity to handle both complete mismatch (perturbed targets) and partial mismatch (perturbed inputs).
+- **Dual-phase Robustness**: Capability to satisfy robustness requirements (Section~\ref{sec:rsr-definition}) in both the training phase and the inference phase.
+- **Motivation Transformation Awareness**: Ability to model transformations between intrinsic and extrinsic motivations over time.
+- **Generality**: Compatibility with existing SRSs without extensive architectural modifications.
+- **Data Accessibility**: Independence on side information (e.g., item attributes, user demographics) beyond raw user-item interaction data.
+- **Scalability**: Efficiency in large-scale real-world scenarios.
+- **Theoretical Grounding**: Existence of formal theoretical guarantees (e.g., robustness bounds, convergence proofs) for the method’s efficacy.
+
+## Architecture-centric RSRs
 
 | Category | Subcategory | Method | Venue-Year | P1: Multi-cause Robustness | P2: Dual-manifestation Robustness | P3: Dual-phase Robustness | P4: Motivation Transformation Awareness | P5: Generality | P6: Data Accessibility | P7: Scalability | P8: Theoretical Grounding |
 |----------|-------------|--------------------------------------------------------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
@@ -88,7 +136,7 @@ This survey provides the first systematic review of advances in RSR research. We
 | | | DiffDiv | SIGIR'25 | △ | △ | △ | × | × | ○ | × | × |
 | | | DiQDiff | WWW'25 | △ | △ | △ | × | × | ○ | × | × |
 
-# Data-centric RSRs
+## Data-centric RSRs
 
 | Category | Subcategory | Method | Venue-Year | Multi-cause Robustness | Dual-manifestation Robustness | Dual-phase Robustness | Motivation Transformation Awareness | Generality | Data Accessibility | Scalability | Theoretical Grounding |
 |----------|-------------|--------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
