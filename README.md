@@ -3,7 +3,7 @@
 Survey Link: [Link to the paper on Preprint](https://arxiv.org/abs/)
 
 In the era of information overload, sequential recommender systems (SRSs) have become indispensable tools for modeling users' dynamic preferences, assisting personalized decision-making and information filtering, and thus attracting significant research and industrial attention. 
-Conventional SRSs operate on a critical assumption that every input interaction sequence is reliably matched with the target subsequent interaction. However, this assumption is frequently violated in practice: real-world user behaviors are often driven by extrinsic motivations—such as behavioral randomness, contextual influences, and malicious attacks—which introduce perturbations into interaction sequences. These perturbations result in mismatched input-target pairs, termed as \textit{unreliable instances}, which corrupt sequential patterns, mislead model training and inference, and ultimately degrade recommendation accuracy. To mitigate these issues, the study of Robust Sequential Recommenders (RSRs) has thus emerged as a focal point.
+Conventional SRSs operate on a critical assumption that every input interaction sequence is reliably matched with the target subsequent interaction. However, this assumption is frequently violated in practice: real-world user behaviors are often driven by extrinsic motivations—such as behavioral randomness, contextual influences, and malicious attacks—which introduce perturbations into interaction sequences. These perturbations result in mismatched input-target pairs, termed as **unreliable instances**, which corrupt sequential patterns, mislead model training and inference, and ultimately degrade recommendation accuracy. To mitigate these issues, the study of Robust Sequential Recommenders (RSRs) has thus emerged as a focal point.
 This survey provides the first systematic review of advances in RSR research. We begin with a thorough analysis of unreliable instances, detailing their causes, manifestations, and adverse impacts. We then delineate the unique challenges of RSRs, which are absent in non-sequential settings and general denoising tasks. Subsequently, we present a holistic taxonomy of RSR methodologies and a systematic comparative analysis based on eight key properties, critically evaluating the strengths and limitations of existing approaches. We also summarize standard evaluation metrics and benchmarks. Finally, we identify open issues and discuss promising future research directions.
 
 # Table of Contents
@@ -11,10 +11,10 @@ This survey provides the first systematic review of advances in RSR research. We
 - [Unreliable Instances in Sequential Recommendation](#Unreliable-Instances-in-Sequential-Recommendation)
 - [Taxonomy of RSRs](#Taxonomy-of-RSRs)
 - [Evaluation Framework of RSRs](#Evaluation-Framework-of-RSRs)
-  - [Architecture-centric RSRs](#Architecture-centric-RSRs)
-  - [Data-centric RSRs](#Data-centric-RSRs)
-  - [Learning-centric RSRs](#Learning-centric-RSRs)
-  - [Inference-centric RSRs](#Inference-centric-RSRs )
+- [Architecture-centric RSRs](#Architecture-centric-RSRs)
+- [Data-centric RSRs](#Data-centric-RSRs)
+- [Learning-centric RSRs](#Learning-centric-RSRs)
+- [Inference-centric RSRs](#Inference-centric-RSRs )
 
 
 
@@ -29,13 +29,8 @@ preceding items in the window serve as the input.
 
 ![Compared Image](figures/robustness.png)
 
-- **Training-phase Robustness**: During training, the RSR must precisely identify items within
-the input sequence that are genuinely relevant to the target (i.e., driven by the same intrinsic
-motivations). By focusing on these items, the model avoids learning erroneous patterns from
-perturbations.
-- **Inference-phase Robustness**: During inference, the target is unobservable. The RSR must
-infer the underlying motivations from the input and ensure the recommendation list provides
-complete coverage for these motivations, without being skewed by perturbations [26, 27].
+- **Training-phase Robustness**: During training, the RSR must precisely identify items within the input sequence that are genuinely relevant to the target (i.e., driven by the same intrinsic motivations). By focusing on these items, the model avoids learning erroneous patterns from perturbations.
+- **Inference-phase Robustness**: During inference, the target is unobservable. The RSR must infer the underlying motivations from the input and ensure the recommendation list provides complete coverage for these motivations, without being skewed by perturbations.
 
 
 # Unreliable Instances in Sequential Recommendation
@@ -54,7 +49,7 @@ complete coverage for these motivations, without being skewed by perturbations [
 
 - **Multi-cause Robustness**: Ability to address diverse extrinsic motivations (behavioral randomness, contextual influences, malicious manipulations) that induce unreliable instances.
 - **Dual-manifestation Robustness**: Capacity to handle both complete mismatch (perturbed targets) and partial mismatch (perturbed inputs).
-- **Dual-phase Robustness**: Capability to satisfy robustness requirements (Section~\ref{sec:rsr-definition}) in both the training phase and the inference phase.
+- **Dual-phase Robustness**: Capability to satisfy robustness requirements in both the training phase and the inference phase.
 - **Motivation Transformation Awareness**: Ability to model transformations between intrinsic and extrinsic motivations over time.
 - **Generality**: Compatibility with existing SRSs without extensive architectural modifications.
 - **Data Accessibility**: Independence on side information (e.g., item attributes, user demographics) beyond raw user-item interaction data.
