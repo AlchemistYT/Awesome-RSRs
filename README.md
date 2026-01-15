@@ -17,7 +17,7 @@ This survey provides the first systematic review of advances in RSR research. We
 - [Inference-centric RSRs](#Inference-centric-RSRs )
 
 # Background and Fundamentals
-![Compared Image](figures/instance.png)
+![Compared Image](figures/instance-new.png)
 
 An example showing how an interaction sequence is split into data instances by a sliding window.
 In each step of sliding, the last item in the sliding window is treated as the target of an instance, while the
@@ -30,11 +30,11 @@ preceding items in the window serve as the input.
 
 
 # Unreliable Instances in Sequential Recommendation
-![Compared Image](figures/causes.png)
+![Compared Image](figures/causes-new.png)
 
 # Taxonomy of RSRs
 
-![Compared Image](figures/rsr-taxonomy.png)
+![Compared Image](figures/rsr-taxonomy-new.png)
 
 - **Architecture-centric RSRs** embed robustness directly into the model architecture through perturbation-resistant designs (e.g., gating mechanisms or diffusion models), ensuring stable internal representations despite perturbed sequences.
 - **Data-centric RSRs** operate at the Instance Construction stage, focusing on cleansing training data before or during model training. They proactively identify and rectify mismatched input-target pairs (via selection, reweighting, or correction), thereby eliminating erroneous sequential patterns from the training process.
@@ -54,7 +54,7 @@ preceding items in the window serve as the input.
 
 ## Architecture-centric RSRs
 
-![Compared Image](figures/Architecture-centric-RSRs.png)
+![Compared Image](figures/Architecture-centric-RSRs-new.png)
 
 | Category | Subcategory | Method | Venue & Year | P1: Multi-cause Robustness | P2: Dual-manifestation Robustness | P3: Dual-phase Robustness | P4: Motivation Transformation Awareness | P5: Generality | P6: Data Accessibility | P7: Scalability | P8: Theoretical Grounding |
 |----------|-------------|--------------------------------------------------------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
@@ -131,7 +131,7 @@ preceding items in the window serve as the input.
 
 ## Data-centric RSRs
 
-![Compared Image](figures/Data-Centric-RSRs.png)
+![Compared Image](figures/Data-centric-RSRs-new.png)
 
 | Category | Subcategory | Method | Venue & Year | P1: Multi-cause Robustness | P2: Dual-manifestation Robustness | P3: Dual-phase Robustness | P4: Motivation Transformation Awareness | P5: Generality | P6: Data Accessibility | P7: Scalability | P8: Theoretical Grounding |
 |----------|-------------|--------------------------------------------------------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
@@ -157,7 +157,7 @@ preceding items in the window serve as the input.
 
 # Learning-centric RSRs
 
-![Compared Image](figures/Learning-Centric-RSRs.png)
+![Compared Image](figures/Learning-centric-RSRs.png)
 
 | Category | Subcategory | Method | Venue & Year | P1: Multi-cause Robustness | P2: Dual-manifestation Robustness | P3: Dual-phase Robustness | P4: Motivation Transformation Awareness | P5: Generality | P6: Data Accessibility | P7: Scalability | P8: Theoretical Grounding |
 |----------|-------------|--------------------------------------------------------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
@@ -217,7 +217,7 @@ preceding items in the window serve as the input.
 
 # Inference-centric RSRs
 
-![Compared Image](figures/Inference-Centric-RSRs.png)
+![Compared Image](figures/Inference-centric-RSRs-new.png)
 
 | Category | Subcategory | Method | Venue & Year | P1: Multi-cause Robustness | P2: Dual-manifestation Robustness | P3: Dual-phase Robustness | P4: Motivation Transformation Awareness | P5: Generality | P6: Data Accessibility | P7: Scalability | P8: Theoretical Grounding |
 |----------|-------------|--------------------------------------------------------|------------|----------------------|-----------------------------|----------------------|-----------------------------------|-----------|-------------------|-------------|---------------------|
