@@ -10,7 +10,7 @@ This survey provides the first systematic review of advances in RSR research. We
 - [Background and Fundamentals](#Background-and-Fundamentals)
 - [Unreliable Instances in Sequential Recommendation](#Unreliable-Instances-in-Sequential-Recommendation)
 - [Taxonomy of RSRs](#Taxonomy-of-RSRs)
-- [Evaluation Framework of RSRs](#Evaluation-Framework-of-RSRs)
+- [Assessment Framework of RSRs](#Assessment-Framework-of-RSRs)
 - [Architecture-centric RSRs](#Architecture-centric-RSRs)
 - [Data-centric RSRs](#Data-centric-RSRs)
 - [Learning-centric RSRs](#Learning-centric-RSRs)
@@ -41,7 +41,7 @@ preceding items in the window serve as the input.
 - **Learning-centric RSRs** introduce robustness during model training. Rather than modifying the data or core architecture, they leverage specialized training strategies (e.g., adversarial training, robust loss functions) to guide the model to learn genuine user preferences while diminishing the influence of unreliable instances.
 - **Inference-centric RSRs** address robustness at the final model inference stage. Acknowledging that real-time input sequences may contain perturbations, these methods generate comprehensive and balanced recommendation lists that fully capture users’ underlying motivations and avoid being skewed by perturbations.
 
-# Evaluation Framework of RSRs
+# Assessment Framework of RSRs
 
 - **P1. Multi-cause Robustness**: Ability to address diverse extrinsic motivations (behavioral randomness, contextual influences, malicious manipulations) that induce unreliable instances.
 - **P2. Dual-manifestation Robustness**: Capacity to handle both complete mismatch (perturbed targets) and partial mismatch (perturbed inputs).
