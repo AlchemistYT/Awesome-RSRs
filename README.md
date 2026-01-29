@@ -1,6 +1,19 @@
 # A Survey on Robust Sequential Recommendation: Fundamentals, Challenges, Taxonomy, and Future Directions
 
-Survey Link: [Link to the paper on Preprint](https://arxiv.org/abs/)
+Survey Link: [Link to the paper on Preprint]([https://arxiv.org/abs/](https://www.preprints.org/frontend/manuscript/dc26ad672abfc3647abb761503b9cbb0/download_pub))
+
+```bibtex
+@article{202601.2218,
+	doi = {10.20944/preprints202601.2218.v1},
+	url = {https://doi.org/10.20944/preprints202601.2218.v1},
+	year = 2026,
+	month = {January},
+	publisher = {Preprints},
+	author = {Yatong Sun and Xiaochun Yang and Bin Wang and Yan Wang and Zhu Sun},
+	title = {A Survey on Robust Sequential Recommendation: Fundamentals, Challenges, Taxonomy, and Future Directions},
+	journal = {Preprints}
+}
+```
 
 In the era of information overload, sequential recommender systems (SRSs) have become indispensable tools for modeling users' dynamic preferences, assisting personalized decision-making and information filtering, and thus attracting significant research and industrial attention. 
 Conventional SRSs operate on a critical assumption that every input interaction sequence is reliably matched with the target subsequent interaction. However, this assumption is frequently violated in practice: real-world user behaviors are often driven by extrinsic motivations—such as behavioral randomness, contextual influences, and malicious attacks—which introduce perturbations into interaction sequences. These perturbations result in mismatched input-target pairs, termed as **unreliable instances**, which corrupt sequential patterns, mislead model training and inference, and ultimately degrade recommendation accuracy. To mitigate these issues, the study of Robust Sequential Recommenders (RSRs) has thus emerged as a focal point.
