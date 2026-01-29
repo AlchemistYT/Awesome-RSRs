@@ -1,6 +1,6 @@
 # A Survey on Robust Sequential Recommendation: Fundamentals, Challenges, Taxonomy, and Future Directions
 
-Survey Link: [Link to the paper on Preprint]([https://www.preprints.org/frontend/manuscript/dc26ad672abfc3647abb761503b9cbb0/download_pub])
+Survey Link: [Link to the paper on Preprint](https://www.preprints.org/frontend/manuscript/dc26ad672abfc3647abb761503b9cbb0/download_pub)
 
 ```bibtex
 @article{202601.2218,
